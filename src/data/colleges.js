@@ -1,0 +1,60 @@
+export const karnatakaColleges = {
+    "Bangalore": [
+        { name: "HITA Education Institutions", location: "Nelamangala", type: "General" },
+        { name: "SB Group of Institutions", location: "Yelahanka New Town", type: "General" },
+        { name: "Brindhavan Group of Institutions", location: "Yelahanka", type: "Engineering/Management" },
+        { name: "Century College of Nursing", location: "Yelahanka", type: "Nursing" },
+        { name: "Dr. NB College of Nursing", location: "Yelahanka New Town", type: "Nursing" },
+        { name: "Akash Medical College", location: "Devanahalli", type: "Medical" },
+        { name: "Acharya Group of Institutions", location: "Soladevanahalli", type: "General" },
+        { name: "Krupanidhi Group of Institutions", location: "Carmelaram", type: "General" },
+        { name: "T John Group of Institutions", location: "Bannerghatta Road", type: "General" },
+        { name: "Dr BR Ambedkar Medical College", location: "Kadugondanahalli", type: "Medical" },
+        { name: "Harsha Group of Institutions", location: "Nelamangala", type: "General" }
+    ]
+};
+
+export const tamilNaduColleges = {
+    "Coimbatore": [
+        { name: "PSGR Krishnammal College for Women", location: "Peelamedu", type: "Arts & Science" },
+        { name: "Hindusthan College of Arts and Science", location: "Avinashi Road", type: "Arts & Science" },
+        { name: "PSG College of Technology", location: "Peelamedu", type: "Engineering" },
+        { name: "Sri Krishna College of Technology", location: "Kovaipudur", type: "Engineering" }
+    ],
+
+    "Chennai": [
+        { name: "SRM University", location: "Kattankulathur", type: "University" },
+        { name: "Saveetha University", location: "Poonamallee", type: "University" },
+        { name: "Sathyabama Institute of Science & Technology", location: "Sholinganallur", type: "University" },
+        { name: "Hindustan University", location: "Padur", type: "University" },
+        { name: "Sri Ramachandra Institute (SRMC)", location: "Porur", type: "Medical/University" },
+        { name: "Vels University", location: "Pallavaram", type: "University" },
+        { name: "Bharath Institute of Higher Education", location: "Selaiyur", type: "University" },
+        { name: "Dr. M.G.R. Educational and Research Institute", location: "Maduravoyal", type: "University" },
+        { name: "B.S. Abdur Rahman Crescent Institute", location: "Vandalur", type: "University" },
+        { name: "Vel Tech Rangarajan Dr. Sagunthala R&D Institute", location: "Avadi", type: "University" }
+    ],
+    "Salem": [
+        { name: "Sona College of Technology", location: "Salem", type: "Engineering" },
+        { name: "Vinayaka Mission's Research Foundation", location: "Salem", type: "Deemed University" }
+    ]
+};
+
+export const keralaColleges = [
+    { name: "KMCT Kuttippuram", location: "Kuttippuram", type: "General" },
+    { name: "KMCT Perinthalmanna", location: "Perinthalmanna", type: "Medical" },
+    { name: "KMCT Vadakara", location: "Vadakara", type: "Medical" },
+    { name: "KMCT Mukkam", location: "Mukkam", type: "Medical" },
+    { name: "KMCT Kasaragod", location: "Kasaragod", type: "Dental/Medical" },
+    { name: "Ernadu Knowledge City Manjeri", location: "Manjeri", type: "Technical" },
+    { name: "Al Ameen Engineering College Shornur", location: "Shornur", type: "Engineering" },
+    { name: "Royal Engineering College Kunnamkulam", location: "Kunnamkulam", type: "Engineering" },
+    { name: "ELIMS College of Arts and Science Thrissur", location: "Thrissur", type: "Arts & Science" },
+    { name: "ICCS Engineering College Thrissur", location: "Thrissur", type: "Engineering" },
+    { name: "Jai Bharat Group of Institutions Perumbavoor", location: "Perumbavoor", type: "General" },
+    { name: "Yeldo Mar Baselios College Kothamangalam", location: "Kothamangalam", type: "Arts & Science" },
+    { name: "Al Azhar Group of Institutions Thodupuzha", location: "Thodupuzha", type: "General" },
+    { name: "MES Arts and Science College Ernakulam", location: "Ernakulam", type: "Arts & Science" },
+    { name: "MES Arts and Science College Erumeli", location: "Erumeli", type: "Arts & Science" },
+    { name: "MTM Arts and Science College Ponnani", location: "Ponnani", type: "Arts & Science" }
+];
