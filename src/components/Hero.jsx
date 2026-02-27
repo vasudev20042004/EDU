@@ -1,4 +1,5 @@
 import React from 'react';
+import heroImage from '../assets/pranav2.jpeg';
 
 export default function Hero() {
     return (
@@ -35,7 +36,7 @@ export default function Hero() {
                         boxShadow: '0 20px 50px rgba(0,0,0,0.5)'
                     }}>
                         <img
-                            src="/src/assets/pranav2.jpeg"
+                            src={heroImage}
                             alt="Education Consultant"
                             style={{ width: '100%', height: '500px', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
                         />

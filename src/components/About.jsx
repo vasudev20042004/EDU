@@ -1,4 +1,5 @@
 import React from 'react';
+import aboutImage from '../assets/pranav1.jpeg';
 
 export default function About() {
     return (
@@ -23,7 +24,7 @@ export default function About() {
                         boxShadow: '0 20px 50px rgba(0,0,0,0.5)'
                     }}>
                         <img
-                            src="/src/assets/pranav1.jpeg"
+                            src={aboutImage}
                             alt="About Consultant"
                             style={{
                                 width: '145%',
