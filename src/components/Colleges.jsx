@@ -18,7 +18,34 @@ const ChevronDown = () => (
     </svg>
 );
 
-const CollegeCard = ({ college }) => (
+const CollegeModal = ({ college, onClose }) => {
+    if (!college) return null;
+
+    return (
+        <div className="college-modal-overlay" onClick={onClose}>
+            <div className="college-modal-content glass-card" onClick={e => e.stopPropagation()}>
+                <button className="modal-close-btn" onClick={onClose}>&times;</button>
+                <div className="modal-header">
+                    <h2>{college.name}</h2>
+                    <span className="badge">{college.type}</span>
+                    <p className="location"><span className="icon">📍</span> {college.location}</p>
+                </div>
+
+                <div className="modal-body" style={{ display: 'flex', flexDirection: 'column', gap: '15px', padding: '20px 0' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(255,255,255,0.05)', padding: '15px 20px', borderRadius: '8px', border: '1px solid var(--glass-border)' }}>
+                        <div>
+                            <h3 style={{ margin: '0 0 5px 0', fontSize: '1.2rem', color: 'var(--text-main)' }}>Fee Structure, Brochure & Videos</h3>
+                            <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-muted)' }}>Get detailed fee breakdown, official prospectus, and campus tours</p>
+                        </div>
+                        <a href="#" className="btn btn-primary" style={{ textDecoration: 'none', padding: '10px 20px', whiteSpace: 'nowrap' }}>Click Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const CollegeCard = ({ college, onViewDetails }) => (
     <div className="college-card glass-card">
         <div className="college-content">
             <span className="badge">{college.type}</span>
@@ -27,11 +54,13 @@ const CollegeCard = ({ college }) => (
                 <span className="icon">📍</span> {college.location}
             </p>
         </div>
-        <button className="enquire-btn">Enquire Now</button>
+        <div className="card-actions">
+            <button className="view-details-btn" onClick={() => onViewDetails(college)}>View Details</button>
+        </div>
     </div>
 );
 
-const CityAccordion = ({ data, searchTerm, expandedCity, toggleCity }) => {
+const CityAccordion = ({ data, searchTerm, expandedCity, toggleCity, onViewDetails }) => {
     return (
         <div className="city-accordion">
             {Object.entries(data).map(([city, colleges]) => {
@@ -63,7 +92,7 @@ const CityAccordion = ({ data, searchTerm, expandedCity, toggleCity }) => {
                         <div className="accordion-content" style={{ display: isExpanded ? 'block' : 'none' }}>
                             <div className="college-list">
                                 {displayColleges.map((college, idx) => (
-                                    <CollegeCard key={idx} college={college} />
+                                    <CollegeCard key={idx} college={college} onViewDetails={onViewDetails} />
                                 ))}
                             </div>
                         </div>
@@ -78,9 +107,20 @@ export default function Colleges() {
     const [activeTab, setActiveTab] = useState('kerala');
     const [expandedCity, setExpandedCity] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCollege, setSelectedCollege] = useState(null);
 
     const toggleCity = (city) => {
         setExpandedCity(expandedCity === city ? null : city);
+    };
+
+    const handleViewDetails = (college) => {
+        setSelectedCollege(college);
+        document.body.style.overflow = 'hidden';
+    };
+
+    const handleCloseModal = () => {
+        setSelectedCollege(null);
+        document.body.style.overflow = 'auto';
     };
 
     const filteredKerala = keralaColleges.filter(c =>
@@ -131,7 +171,7 @@ export default function Colleges() {
                         <div className="college-list">
                             {filteredKerala.length > 0 ? (
                                 filteredKerala.map((college, idx) => (
-                                    <CollegeCard key={idx} college={college} />
+                                    <CollegeCard key={idx} college={college} onViewDetails={handleViewDetails} />
                                 ))
                             ) : (
                                 <p className="no-results">No colleges found matching "{searchTerm}"</p>
@@ -145,6 +185,7 @@ export default function Colleges() {
                             searchTerm={searchTerm}
                             expandedCity={expandedCity}
                             toggleCity={toggleCity}
+                            onViewDetails={handleViewDetails}
                         />
                     )}
 
@@ -154,10 +195,14 @@ export default function Colleges() {
                             searchTerm={searchTerm}
                             expandedCity={expandedCity}
                             toggleCity={toggleCity}
+                            onViewDetails={handleViewDetails}
                         />
                     )}
                 </div>
             </div>
+
+            <CollegeModal college={selectedCollege} onClose={handleCloseModal} />
         </section>
     );
 }
+

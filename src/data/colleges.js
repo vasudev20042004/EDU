@@ -41,8 +41,8 @@ export const tamilNaduColleges = {
 };
 
 export const keralaColleges = [
-    { name: "KMCT Kuttippuram", location: "Kuttippuram", type: "General" },
-    { name: "KMCT Perinthalmanna", location: "Perinthalmanna", type: "Medical" },
+    { name: "KMCT Kuttippuram", location: "Kuttippuram", type: "General", brochureLink: "https://drive.google.com/drive/folders/1l0B4arUuwWIYhwBJ8Z2Ma_fEIVIHCYAm?usp=sharing" },
+    { name: "KMCT Perinthalmanna", location: "Perinthalmanna", type: "Medical", brochureLink: "https://drive.google.com/drive/folders/1C3N7MA__QzHgliZUVlUiJmD5G68hKmxE?usp=sharing" },
     { name: "KMCT Vadakara", location: "Vadakara", type: "Medical" },
     { name: "KMCT Mukkam", location: "Mukkam", type: "Medical" },
     { name: "KMCT Kasaragod", location: "Kasaragod", type: "Dental/Medical" },

@@ -33,7 +33,7 @@ export default function Footer() {
 
                 <div className="footer-about">
                     <h4 style={{ marginBottom: '20px', color: 'var(--accent-gold)' }}>EduMentor</h4>
-                    <p>Helping students secure their dream college since 2012.</p>
+                    <p>Empowering educational consultants and partners since 2012.</p>
                     <p className="copyright" style={{ marginTop: '20px', color: 'var(--text-muted)' }}>
                         © {new Date().getFullYear()} EduMentor. All Rights Reserved.
                     </p>

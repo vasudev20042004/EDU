@@ -21,11 +21,7 @@ const services = [
         icon: "📝",
         description: "Hassle-free assistance with application forms, documentation, and submission processes."
     },
-    {
-        title: "Entrance Exam Tips",
-        icon: "💡",
-        description: "Strategic guidance and resources to help you crack competitive entrance examinations."
-    },
+
     {
         title: "Direct Admission",
         icon: "🤝",

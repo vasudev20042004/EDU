@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
 import Colleges from './components/Colleges';
-import Success from './components/Success';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -16,7 +15,6 @@ function App() {
             <About />
             <Services />
             <Colleges />
-            <Success />
             <Contact />
             <Footer />
         </div>

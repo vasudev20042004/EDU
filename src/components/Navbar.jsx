@@ -28,8 +28,7 @@ export default function Navbar() {
                     <a href="#about" onClick={() => setIsOpen(false)}>About</a>
                     <a href="#services" onClick={() => setIsOpen(false)}>Services</a>
                     <a href="#colleges" onClick={() => setIsOpen(false)}>Colleges</a>
-                    <a href="#success" onClick={() => setIsOpen(false)}>Success Stories</a>
-                    <a href="#contact" onClick={() => setIsOpen(false)} className="btn btn-outline" style={{ padding: '8px 24px' }}>Book Consultation</a>
+                    <a href="#contact" onClick={() => setIsOpen(false)} className="btn btn-outline" style={{ padding: '8px 24px' }}>Partner With Us</a>
                 </div>
             </div>
         </nav>

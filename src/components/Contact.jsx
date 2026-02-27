@@ -22,8 +22,8 @@ export default function Contact() {
     return (
         <section id="contact" className="section contact-section" style={{ background: 'var(--bg-card)' }}>
             <div className="container">
-                <h2 className="section-title">Get Expert Advice</h2>
-                <span className="section-subtitle">Start Your Admission Journey Today</span>
+                <h2 className="section-title">Get In Touch</h2>
+                <span className="section-subtitle">Grow Your Admission Strategy With Us</span>
 
                 <div className="contact-container" style={{
                     display: 'grid',
@@ -54,12 +54,12 @@ export default function Contact() {
                             width: '100%',
                             padding: '15px'
                         }}>
-                            <span>💬</span> Chat heavily on WhatsApp
+                            <span>💬</span> Chat on WhatsApp
                         </a>
                     </div>
 
                     <form onSubmit={handleSubmit} className="contact-form glass-card">
-                        <h3 style={{ marginBottom: '30px' }}>Book a Free Consultation</h3>
+                        <h3 style={{ marginBottom: '30px' }}>Become a Partner Today</h3>
 
                         <div className="form-group" style={{ marginBottom: '20px' }}>
                             <label>Full Name</label>
@@ -86,23 +86,23 @@ export default function Contact() {
                         </div>
 
                         <div className="form-group" style={{ marginBottom: '20px' }}>
-                            <label>Interested Course/College</label>
+                            <label>Intended Partnership Focus</label>
                             <select
                                 name="interest"
                                 value={formData.interest}
                                 onChange={handleChange}
                                 style={{ width: '100%', padding: '12px', background: 'rgba(255,255,255,0.05)', border: '1px solid var(--glass-border)', color: '#fff', borderRadius: '8px' }} // Adjusted color for dropdown options visibility
                             >
-                                <option value="General Inquiry">General Inquiry</option>
-                                <option value="Engineering">Engineering</option>
-                                <option value="Medical">Medical</option>
-                                <option value="Nursing">Nursing</option>
-                                <option value="Management">Management</option>
+                                <option style={{ background: '#0B1120', color: '#fff' }} value="General Inquiry">General Inquiry</option>
+                                <option style={{ background: '#0B1120', color: '#fff' }} value="Engineering">Engineering</option>
+                                <option style={{ background: '#0B1120', color: '#fff' }} value="Medical">Medical</option>
+                                <option style={{ background: '#0B1120', color: '#fff' }} value="Nursing">Nursing</option>
+                                <option style={{ background: '#0B1120', color: '#fff' }} value="Management">Management</option>
                             </select>
                         </div>
 
                         <button type="submit" className="submit-btn btn-primary" style={{ width: '100%', padding: '15px', fontSize: '1.1rem' }}>
-                            Request Call Back
+                            Connect With Us
                         </button>
                     </form>
 

@@ -121,29 +121,34 @@ button {
 /* Navbar */
 .navbar {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    max-width: 1200px;
     z-index: 1000;
-    background: transparent;
-    backdrop-filter: blur(0px);
-    padding: 1.5rem 0;
-    border-bottom: 1px solid transparent;
-    transition: all 0.3s ease;
+    background: rgba(15, 23, 42, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .navbar.scrolled {
-    background: rgba(11, 16, 27, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--glass-border);
-    padding: 0.8rem 0;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    top: 15px;
+    background: rgba(15, 23, 42, 0.85);
+    border-color: rgba(212, 175, 55, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    padding: 8px 30px;
 }
 
 .nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .logo {
@@ -158,6 +163,7 @@ button {
 
 .nav-links {
     display: flex;
+    align-items: center;
     gap: 2rem;
 }
 
@@ -180,17 +186,25 @@ button {
 
 /* Mobile Styling */
 @media (max-width: 768px) {
+    .navbar {
+        width: 95%;
+        padding: 10px 20px;
+    }
+
     .nav-links {
         display: none;
-        /* Add JS toggle later */
         position: absolute;
-        top: 100%;
+        top: 120%;
         left: 0;
         width: 100%;
-        background: var(--bg-dark);
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--glass-border);
+        border-radius: 20px;
         flex-direction: column;
         padding: 2rem;
         text-align: center;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     }
 
     .nav-links.open {
@@ -203,6 +217,10 @@ button {
 
     .section-title {
         font-size: 2rem;
+    }
+
+    .hero-image {
+        display: none !important;
     }
 }
 
